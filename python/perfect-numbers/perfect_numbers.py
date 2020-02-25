@@ -12,10 +12,12 @@ Deficient: aliquot sum < number
 
 
 def classify(number):
+    # get factors using loop
     factors = [i for i in range(1, number) if number%i==0]
+    # raise exception if not a natural number
     if number < 1 or number % 1 != 0:
         raise ValueError('{} is not a natual number.'.format(number))
-
+    # logic to return what kind of number
     if sum(factors) > number:
         return "abundant"
     if sum(factors) < number:
