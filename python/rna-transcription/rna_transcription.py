@@ -14,7 +14,7 @@ C -> G
 T -> A
 A -> U
 
-Could be done using maketrans()
+Could be done using maketrans(), and translate
 
 conversion = str.maketrans("GCTA", "CGAU")
 return dna_strand.translate(conversion)
