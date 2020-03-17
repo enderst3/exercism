@@ -11,10 +11,7 @@ def personal_best(scores):
 
 
 def personal_top_three(scores):
-    # make list from low to high
-    scores.sort()
-    # reverse list
-    scores.reverse()
-    # return the first 3 list items could also be [0:3]
-    return scores[:3]
+    # use sorted() to create temp reversed list and return first 3 scores
+    # scores.sort() would change the original scores list, we don't want that.
+    return sorted(scores, reverse=True)[:3]
     
